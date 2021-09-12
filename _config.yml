@@ -1,5 +1,6 @@
-title: Digitando Blog
-email: lucassilvacds7@gmail.com
+title: Digitando blog
+logourl: /assets/images/logo.png
+email: ""
 description: Feito com jekyllrb.
 baseurl: "/blog"
 url: "https://luccasscds.github.io"
@@ -7,6 +8,7 @@ url: "https://luccasscds.github.io"
 # Social networds
 linkedin_username: lucassilva21
 github_username:  luccasscds
+instagram_username: programadorlucas
 
 # Link posts
 permalink: /post/:title/

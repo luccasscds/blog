@@ -1,0 +1,75 @@
+#default main.page-content{
+    padding: 4vh 0 0 0;
+    position: relative;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#default main.page-content .section-posts{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#default main.page-content .section-posts .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 0;
+    margin: 0;
+
+    max-width: 100%;
+}
+
+#default main.page-content .section-posts .wrapper .item-post {
+    min-width: 350px;
+    flex: 999 0 33.333%;
+}
+
+#default main.page-content .section-posts .wrapper .item-post article {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: calc(100% - 30px);
+    min-height: 370px;
+    margin: 15px 0 15px 15px;
+    padding: 40px 38px 45px;
+    border-radius: 26px;
+}
+
+#default main.page-content .section-posts .wrapper .item-post article .item-link-overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 26px;
+}
+
+#default main.page-content .section-posts .wrapper .item-post article .item-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+#default main.page-content .section-posts .wrapper .item-post article .item-image + h2{
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-right: 10%;
+}
+
+#default main.page-content .section-posts .wrapper .item-post article .item-image + h2 > a {
+    color: white;
+}

@@ -1,21 +1,24 @@
-<main class="page-content" aria-label="Content">
+<main class="page-content">
+  <section class="section-posts">
     <div class="wrapper">
-      <div class="home">
-        <h2 class="post-list-heading">Publicações</h2>
-        <ul class="post-list">
-          <!-- posts -->
-          {% for post in site.posts %}
-            <li>
-              <span class="post-meta">{{ post.date | date: "%b, %-d de %Y" }}</span>
-              <h3>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                  {{ post.title }}
-                </a>
-              </h3>
-            </li>
-          {% endfor %}
-          <!-- fim posts -->
-        </ul>
-      </div>
+      <!-- posts -->
+      {% for post in site.posts %}
+        <div class="item-post">
+          <article>
+            <a class="item-link-overlay" href="{{ post.url | prepend: site.baseurl }}"></a>
+            <div class="item-image" style="background-image: url('https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg');"></div>
+
+            <h2>
+              <a class="" href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}
+              </a>
+            </h2>
+            <span class="">{{ post.date | date: "%b, %-d de %Y" }}</span>
+
+          </article>
+        </div>
+      {% endfor %}
+      <!-- fim posts -->
     </div>
+  </section>
 </main>

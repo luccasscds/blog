@@ -1,5 +1,27 @@
 header.site-header {
+    max-width: 1200px;
+
     border-top: 0;
-    margin-bottom: 1rem;
+    margin: 0 auto;
+}
+
+header.site-header .wrapper {
+    padding: 1.5rem 0;
+    margin: 0;
+
     display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+header.site-header .wrapper .header-logo {
+    margin: 0;
+}
+
+header.site-header .wrapper .header-logo .site-title {
+    line-height: 0;
+}
+
+header.site-header .wrapper .header-logo .site-title .logo {
+    max-height: 50px;
+    margin-right: 10px;
 }
