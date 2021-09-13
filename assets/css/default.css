@@ -64,8 +64,8 @@
 }
 
 #default main.page-content .section-posts .wrapper .item-post article .item-image::before {
-    /* nao pareceu */
     content: "";
+    display: block;
     width: 100%;
     height: 100%;
     opacity: 0.4;
@@ -79,6 +79,6 @@
     margin-right: 10%;
 }
 
-#default main.page-content .section-posts .wrapper .item-post article .item-image + h2 > a {
+.post-text {
     color: white;
 }

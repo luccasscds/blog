@@ -8,12 +8,13 @@
             <a class="item-link-overlay" href="{{ post.url | prepend: site.baseurl }}"></a>
             <div class="item-image" style="background-image: url('https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg');"></div>
 
-            <h2>
-              <a class="" href="{{ post.url | prepend: site.baseurl }}">
+            <h2 class="post-text">
+              <a href="{{ post.url | prepend: site.baseurl }}">
                 {{ post.title }}
               </a>
             </h2>
-            <span class="">{{ post.date | date: "%b, %-d de %Y" }}</span>
+
+            <span class="post-text">{{ post.date | date: "%b, %-d de %Y" }}</span>
 
           </article>
         </div>
