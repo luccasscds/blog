@@ -1,0 +1,28 @@
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer.footer-section .footer-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer.footer-section .footer-top .social-links {
+    padding-left: 10px;
+}
+
+footer.footer-section .footer-top .social-links .social-media-list {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 10px 0;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+}

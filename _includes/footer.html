@@ -1,26 +1,21 @@
-<link rel="stylesheet" href="{{'/assets/css/includes/footer.css' | relative_url}}">
+<link rel="stylesheet" href="{{ '/assets/css/includess/footer.css' | relative_url}}">
 
 <footer class="footer-section">
-  <data class="" href="{{ '/' | relative_url }}"></data>
+  <data href="{{ '/' | relative_url }}"></data>
 
-  <div class="">
-
-    <div class="">
-      <div class="">
-        <ul class="">
-          <li class="">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-        </ul>
-      </div>
-
-      <div class="">
-        {%- include social.html -%}
-      </div>
+  <div class="footer-top">
+    <div class="footer-logo-text">
+      <strong>
+        {%- if site.author -%}
+          {{ site.author | escape }}
+        {%- else -%}
+          {{ site.title | escape }}
+        {%- endif -%}
+      </strong>
+    </div>
+    
+    <div class="social-links">
+      {%- include social.html -%}
     </div>
   </div>
 
