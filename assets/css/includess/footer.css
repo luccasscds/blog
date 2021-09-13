@@ -21,3 +21,7 @@ footer.footer-section .footer-top .social-links .social-media-list {
     align-items: baseline;
     margin: 10px 0;
 }
+
+footer.footer-section .footer-copyright > a {
+    color: initial;
+}
