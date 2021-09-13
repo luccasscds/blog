@@ -11,9 +11,10 @@ github_username:  luccasscds
 instagram_username: programadorlucas
 
 # Link posts
-permalink: /post/:title/
+permalink: /:title/
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
