@@ -1,14 +1,20 @@
 title: Digitando blog
-logourl: /assets/images/logo.png
-email: ""
+tagline: Blog focando em compartilhar conhecimentos para programadores
+logo: /assets/images/logo.png
 description: jekyllrb
-baseurl: "/blog"
 url: "https://luccasscds.github.io"
+baseurl: "/blog"
+locale: pt
 
 # Social networds
 linkedin_username: lucassilva21
 github_username:  luccasscds
 instagram_username: programadorlucas
+
+# authors
+collections:
+  authors:
+    output: true
 
 # Link posts
 permalink: /:title/
