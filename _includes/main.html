@@ -1,25 +1,34 @@
 <main class="page-content">
   <section class="section-posts">
     <div class="wrapper">
-      <!-- posts -->
-      {% for post in site.posts %}
+      {% for post in paginator.posts %}<!--limit:2 para limitar os posts da pagina atual-->
         <div class="item-post">
           <article>
             <a class="item-link-overlay" href="{{ post.url | prepend: site.baseurl }}"></a>
             <div class="item-image" style="background-image: url('https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg');"></div>
 
-            <h2>
-              <a class="post-text" href="{{ post.url | prepend: site.baseurl }}">
-                {{ post.title }}
-              </a>
+            <h2 class="post-text">
+              {{ post.title }}
             </h2>
 
-            <span class="post-text">{{ post.date | date: "%b, %-d de %Y" }}</span>
+            <span class="post-text">{{ post.date | date_to_string" }}</span>
 
           </article>
         </div>
       {% endfor %}
-      <!-- fim posts -->
+    </div>
+
+    <div class="paginations-links">
+      <div class="previous-page">
+        {% if paginator.previous_page > 0 %}
+          <a href="{{ paginator.previous_page_path | relative_url }}">Voltar</a>
+        {% endif %}
+      </div>
+      <div class="next-page">
+        {% if paginator.page != paginator.total_pages %}
+          <a href="{{ paginator.next_page_path | relative_url }}">Mais publicações</a>
+        {% endif %}
+      </div>
     </div>
   </section>
 </main>

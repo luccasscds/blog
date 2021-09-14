@@ -82,3 +82,10 @@
 .post-text {
     color: white !important;
 }
+
+#default main.page-content .section-posts .paginations-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1rem;
+}
