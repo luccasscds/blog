@@ -1,9 +1,9 @@
 # =================================
 #             README
 # Para dar permissão ao arquivo:
-#   chmod a+x create_post.sh
+#   chmod a+x create_post.sh ou chmod a+x .create_post
 # Para executar na raiz do projeto:
-#   ./create_post.sh
+#   ./create_post.sh ou ./.create_post
 # =================================
 
 title=$1
