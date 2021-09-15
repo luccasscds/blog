@@ -7,13 +7,21 @@
             <a class="item-link-overlay" href="{{ post.url | prepend: site.baseurl }}"></a>
             <div class="item-image" style="background-image: url('https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg');"></div>
 
-            <h2 class="post-text">
+            <h2 class="text-white">
               {{ post.title }}
             </h2>
 
-            <span class="post-text">{{ post.date | date_to_string" }}</span>
+            <div class="">
+              <span class="text-white">por</span>
+              {% for author in site.authors %}
+                {% if author.short_name == post.author %}
+                  <strong class="author-name text-white">{{ author.name }}</strong>
+                {% endif %}
+              {% endfor %}
 
-            <span class="post-">{{ post.author }}</span>
+              <span class="text-white">{{ post.date | date_to_string" }}</span>
+            </div>
+
           </article>
         </div>
       {% endfor %}
