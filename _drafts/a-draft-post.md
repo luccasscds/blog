@@ -1,5 +1,5 @@
 ---
-title: rascunho
+title: Como criar rascunho no seu blog
 layout: post
 categories: jekyll
 author: Lucas
@@ -9,7 +9,7 @@ author: Lucas
 
 Para ver os dartfs junto com os outros posts
 
-### Rode o seguinte comando:
+### Rode o seguinte o comando:
 ```bash
 bundle exec jekyll serve --drafts
 ```
