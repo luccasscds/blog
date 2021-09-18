@@ -79,6 +79,15 @@
     margin-right: 10%;
 }
 
+#default main.page-content .section-posts .wrapper .item-post article .group-description {
+    margin-bottom: 60px;
+    line-height: 1.3;
+}
+
+.group-description span, .group-description time {
+    font-size: 14px;
+    opacity: 0.9;
+}
 .text-white {
     color: white !important;
 }

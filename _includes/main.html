@@ -11,17 +11,55 @@
               {{ post.title }}
             </h2>
 
-            <div class="">
-              <span class="text-white">por</span>
+            <div class="group-description">
               {% for author in site.authors %}
                 {% if author.short_name == post.author %}
+                  <span class="text-white">por</span>
                   <strong class="author-name text-white">{{ author.name }}</strong>
                 {% endif %}
               {% endfor %}
 
-              <span class="text-white">{{ post.date | date_to_string" }}</span>
-            </div>
+              
+              {% assign nowDay = "now" | date: "%d" | abs %}
+              {% assign nowMonth = "now" | date: "%m" | abs %}
+              {% assign nowYear = "now" | date: "%Y" | abs %}
+              {% assign dayCreated = post.date | date: "%d" | abs %}
+              {% assign monthCreated = post.date | date: "%m" | abs %}
+              {% assign yearCreated = post.date | date: "%Y" | abs %}
+              
+              {% assign diferencaDay =  nowDay | minus: dayCreated %}
+              {% assign diferencaMonth =  nowMonth | minus: monthCreated %}
+              {% assign diferencaYear = nowYear | minus: yearCreated %}
+              
+              {% if  nowYear == yearCreated %}
+                {% if diferencaMonth == 0 %}
+                  {% if diferencaDay == 0 %}
+                    <time class="text-white">há poucas horas</time>
+                  {% endif %}
+                  {% if diferencaDay > 0 %}
+                    <time class="text-white">há {{ diferencaDay }} dias</time>
+                  {% endif %}
+                {% endif %}
 
+                {% if diferencaMonth > 0 %}
+                  <time class="text-white">há {{ diferencaMonth }} meses</time>
+                {% endif %}
+              {% endif %}
+              {% if  nowYear != yearCreated %}
+                {% if diferencaYear == 0 %}
+                  {% if nowMonth < monthCreated %}
+                    {% assign subtrationMonthCreated = 12 | minus: monthCreated  %}
+                    {% assign sumMonthNow = subtrationMonthCreated | plus: nowMonth  %}
+                    <time class="text-white">há {{ sumMonthNow }} meses</time>
+                  {% endif %}
+                {% endif %}
+                {% if diferencaYear > 0 %}
+                  <time class="text-white">há {{ diferencaYear }} ano</time>
+                {% endif %}
+              {% endif %}
+
+            </div>
+            <p class="text-white"><strong>{{ post.categories }}</strong></p>
           </article>
         </div>
       {% endfor %}
