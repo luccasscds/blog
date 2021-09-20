@@ -85,9 +85,14 @@
 }
 
 .group-description span, .group-description time {
-    font-size: 14px;
+    font-size: clamp(10px,4vw,14px);
     opacity: 0.9;
 }
+
+.group-description .author-name {
+    font-size: clamp(13px,4vw,18px);
+}
+
 .text-white {
     color: white !important;
 }

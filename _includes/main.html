@@ -5,7 +5,7 @@
         <div class="item-post">
           <article>
             <a class="item-link-overlay" href="{{ post.url | prepend: site.baseurl }}"></a>
-            <div class="item-image" style="background-image: url('https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg');"></div>
+            <div class="item-image" style="background-image: url('{{ post.image }}');"></div>
 
             <h2 class="text-white">
               {{ post.title }}
