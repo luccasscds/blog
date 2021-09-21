@@ -31,78 +31,59 @@
               {% assign differenceDay =  nowDay | minus: dayCreated %}
               {% assign differenceMonth =  nowMonth | minus: monthCreated %}
               {% assign differenceYear = nowYear | minus: yearCreated %}
-              
-              {% if nowYear == yearCreated %}
 
+              {% if nowYear == yearCreated %}
                 {% if nowMonth == monthCreated %}
                   {% if nowDay == dayCreated %}
                     <time class="text-white">há poucas horas</time>
                   {% endif %}
-
                   {% if nowDay != dayCreated %}
                     <time class="text-white">há {{ differenceDay }} dias</time>
                   {% endif %}
                 {% endif %}
-
                 {% if nowMonth != monthCreated %}
                   {% if nowDay >= dayCreated %}
                     <time class="text-white">há {{ differenceMonth }} meses</time>
                   {% endif %}
-
                   {% if nowDay < dayCreated %}
                     {% assign itHasOneMonth = 30 | minus: dayCreated | plus: nowDay %}
                     {% if differenceMonth == 1 %}
                       <time class="text-white">há {{ itHasOneMonth }} dias</time>
                     {% endif %}
-
                     {% if differenceMonth > 1 %}
                       {% if itHasOneMonth == 30 %}
                         <time class="text-white">há {{ differenceMonth }} meses</time>
                       {% endif %}
-
                       {% if itHasOneMonth < 30 %}
                         <time class="text-white">há {{ differenceMonth | minus: 1 }} meses</time>
                       {% endif %}
                     {% endif %}
-
                   {% endif %}
-                  
                 {% endif %}
               {% endif %}
-
-
               {% if  nowYear != yearCreated %}
                 {% if nowMonth == monthCreated and nowDay == dayCreated%}
                   <time class="text-white">há {{ differenceYear }} ano</time>
                 {% endif %}
-
                 {% if nowMonth != monthCreated %}
                   {% assign itHasOneYear = 12 | minus: monthCreated | plus: nowMonth %}
-                  
                   {% if differenceYear == 1 %}
-
                     {% if itHasOneYear < 12 %}
                       <time class="text-white">há {{ itHasOneYear }} meses</time>
                     {% endif %}
-                    
                     {% if itHasOneYear >= 12 %}
                       <time class="text-white">há {{ differenceYear }} ano</time>
                     {% endif %}
                   {% endif %}
-                    
                   {% if differenceYear > 1 %}
                     {% if itHasOneYear >= 12 %}
                       <time class="text-white">há {{ differenceYear }} ano</time>
                     {% endif %}
-
                     {% if itHasOneYear < 12 %}
                       <time class="text-white">há {{ differenceYear | minus: 1 }} ano</time>
                     {% endif %}
                   {% endif %}
-
-
                 {% endif %}
-
               {% endif %}
 
             </div>
