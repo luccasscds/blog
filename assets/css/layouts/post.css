@@ -1,7 +1,7 @@
 #post {
     color: #161b3d;
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp(1rem,4vw,18px);
 }
 
 #post article .section-baner-and-image {

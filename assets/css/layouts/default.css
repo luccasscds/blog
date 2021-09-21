@@ -73,7 +73,7 @@
 }
 
 #default main.page-content .section-posts .wrapper .item-post article .item-image + h2{
-    font-size: 33px;
+    font-size: clamp(25px,4vw, 33px);
     font-weight: 700;
     line-height: 1.35;
     margin-right: 10%;
