@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: clamp(14px,4vw,18px);
 }
 
 footer.footer-section .footer-top {
@@ -20,10 +21,6 @@ footer.footer-section .footer-top .social-links .social-media-list {
     justify-content: center;
     align-items: baseline;
     margin: 10px 0;
-}
-
-footer.footer-section .footer-copyright {
-    font-size: clamp(14px,4vw,18px);
 }
 
 footer.footer-section .footer-copyright > a {
