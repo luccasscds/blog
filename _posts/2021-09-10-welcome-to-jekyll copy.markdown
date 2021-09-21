@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-date:   2021-08-10 16:39:58 -0300
-categories: javascript
+date:   2021-09-10 16:39:58 -0300
+categories: Jekyll
 author: Lucas
 image: https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg
 ---
