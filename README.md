@@ -1,13 +1,27 @@
-## Baixe o projeto
+# 🧾 Blog
+
+
+## Requisitos antes de usar:
+* Ruby
+* RubyGems
+* GCC and Make
+> Para mais informações clica [aqui](https://jekyllrb.com/docs/).
+
+## 📥 Como executar o projeto:
 ```bash
-git clone https://github.com/luccasscds/blog.git
+    # Baixe o projeto
+    git clone https://github.com/luccasscds/blog.git
 ```
-## Entre no mesmo
 ```bash
-cd blog/
+    # Entre no mesmo
+    cd blog/
 ```
-## Execute o bundle
 ```bash
-bundle exec jekyll serve --livereload
+    # Instalar dependências
+    bundle install
 ```
-## Entre no navegador e digite [http://localhost:4000/blog/](http://localhost:4000/blog/)
+```bash
+    # Execute o bundle
+    bundle exec jekyll serve --livereload
+```
+>  Entre no navegador e digite [http://localhost:4000/blog/](http://localhost:4000/blog/).
